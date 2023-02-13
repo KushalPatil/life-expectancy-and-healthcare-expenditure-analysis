@@ -1,86 +1,76 @@
-# Healthcare-Quality-and-Expenses-Analysis 
+# Healthcare Quality and Expenses Analysis
 
-## Problem Statement
-* To analyse the Healthcare System of the country and determine various factors that impact the Healthcare Quality and Expenses
-* Understand how to minimize the Health Expenses while improving or maintaining the same Healthcare Quality. 
-* Providing insights to policymakers, healthcare officials, governments for effective decision making.
+## Introduction
+The purpose of this analysis is to examine the healthcare system of a country and identify the various factors that influence healthcare quality and expenses. The objective is to understand how to reduce health expenses while improving or maintaining the same quality of healthcare. The findings from the analysis will provide insights to policymakers, healthcare officials, and governments for informed decision making.
 
 ## Data Collection
-* Collected the data from OCED and WHO websites of 39 countries over 2010-16 years
-#### Sources
-* OECD - https://stats.oecd.org/Index.aspx
-* WHO  - https://www.who.int/gho/database/en/
+Data was collected from the OECD and WHO websites of 39 countries over the 2010-16 period. The sources of data are:
+- OECD: https://stats.oecd.org/Index.aspx
+- WHO: https://www.who.int/gho/database/en/
 
-#### Variables considered
-##### 1. Health Resources 
-        a. Hospitals
-        b. Hospital Employment
-        c. Total Equipment
-        d. Medical Graduates
-        e. Nurse Graduates
-##### 2. Health Quality
-        a. Death by respiratory disease
-        b. Death by circulatory disease
-        c. Death by Cancer
-        d. Death by accidents
-        a. Mean Schooling years
-##### 3. Social Factors
-        a. Mean Schooling years
-        b. Population Structure (Age>65)
-##### 4. Economic Factors
-        a. Expenditure per capita
-##### 5. Medical Procedures
-        a. Diagnostic Exams
-##### 6. Insurance
-        a. Public Insurance
-        b. private Insurance
+The following variables were considered in the analysis:
+1. Health Resources:
+    a. Hospitals
+    b. Hospital Status
+    c. Total Equipment
+    d. Medical Graduates
+    e. Nurse Graduates
+2. Health Quality:
+    a. Death by respiratory disease
+    b. Death by circulatory disease
+    c. Death by Cancer
+    d. Death by accidents
+    a. Mean Schooling years
+3. Social Factors:
+    a. Mean Schooling years
+    b. Population Structure (Age>65)
+4. Economic Factors:
+    a. Expenditure per capita
+5. Medical Procedures:
+    a. Diagnostic Exams
+6. Insurance:
+    a. Public Insurance
+    b. Private Insurance
 
 ## Data Cleaning
-* Imputed the null values based on the characteristic of the respective country and yeear over year change.
+Null values in the data were imputed based on the characteristics of each country and year-over-year changes.
 
-## Exploratory Data Analysis 
-#### Distribution of the Health_Expenditure and Life Expectancy
-![EDA](https://github.com/vinayreddy115/Healthcare-Quality-and-Expenses-Analysis/blob/main/Images/Distribution%20of%20Expenditure%20data.png)
-
-![EDA](https://github.com/vinayreddy115/Healthcare-Quality-and-Expenses-Analysis/blob/main/Images/Distribution%20of%20Life%20Expectancy%20data.png)
-
-#### Correlation Plot
-![EDA](https://github.com/vinayreddy115/Healthcare-Quality-and-Expenses-Analysis/blob/main/Images/Correlation%20plot.png)
-
-#### Health Expenditure vs Life Expectancy
-![EDA](https://github.com/vinayreddy115/Healthcare-Quality-and-Expenses-Analysis/blob/main/Images/LifeExpectancy%20vs%20Healthcare%20Expenditure.png)
+## Exploratory Data Analysis
+The following visualizations were created as part of the exploratory data analysis:
+- Distribution of Health Expenditure and Life Expectancy
+- Correlation Plot
+- Health Expenditure vs Life Expectancy
 
 ## Model Building
-As this is a multi-level data with lower level as time(years), we built the below mentioned Panel regression models using the plm packages 
-* pooling model as a baseline model 
-* Fixed effects
-* Random effects
+A panel regression model was built to analyze the multi-level data (lower level as time, years). The following models were used in the analysis:
+- Pooling Model (baseline model)
+- Fixed Effects Model
+- Random Effects Model
 
-## Insights and recommendation 
-#### Impact of variables on Health Quality
-##### postive effect on Health Quality
-* Number of hospitals
-* Medical graduates, 
-* Nurse graduates , 
-##### Negative effect on Health Quality
-* while deaths by any diseases 
-#### Quantitative effects
-![image](https://user-images.githubusercontent.com/54513205/117491290-01534680-af3e-11eb-8520-95b941834367.png)
+## Results and Recommendations
+The impact of the variables on healthcare quality and expenses was analyzed. The following effects were observed:
+- Positive effect on healthcare quality:
+  - Number of Hospitals
+  - Medical Graduates
+  - Nurse Graduates
+- Negative effect on healthcare quality:
+  - Deaths by any diseases
+- Positive effect on healthcare expenses:
+  - Public Insurance
+  - Hospitals
+- Negative effect on healthcare expenses:
+  - Private Insurance
 
-#### Impact of variables on Health Expenses
-##### Postive effect on Health Expenses
-* Public Insurance  
-* Hospitals 
-##### Negative effect on Health Expenses
-* private insurance  
-#### Quantitative effects
-![image](https://user-images.githubusercontent.com/54513205/117483678-01e6df80-af34-11eb-9dd4-2276d19f12ba.png)
+Quantitative effects of the variables were visualized.
 
-## Code and Resources Used
-R packages : 
-* Stargazer
-* Plm
-* Pheatmap
+## Code and Tools Used
+The following R packages were used in the analysis:
+- Stargazer
+- Plm
+- Pheatmap
+
+## References
+A list of references used in the analysis are provided at the end of the document.
 
 ## References 
 1) Data Collection, OECD- https://stats.oecd.org/Index.aspx
